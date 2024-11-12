@@ -89,10 +89,10 @@ namespace SimulacroParcial2
             } while (opcion != 0); //Continuar hasta que el usuario elija salir
         }
 
-        //1. Funcion para agregar un videojuego
+        //1. Funcion para agregar un videojuego(Verificar ingresos y agregar elemento a una lista)
         static void AgregarVideojuego()
         {
-            //Crea una nueva variable con la estructura de Videojuego
+            //Crea una nueva variable tipo estructura
             Videojuego nuevoVideojuego;
             bool existe = false;
 
@@ -100,7 +100,7 @@ namespace SimulacroParcial2
             Console.WriteLine("Ingrese el nombre del videojuego");
             nuevoVideojuego.nombre = Console.ReadLine();
 
-            //Verificar que el nombre no este repetido 
+            //Verificar que el nombre no este repetido
             foreach (var juego in videojuegos)
             {
                 //Controla si los juegos existes son iguales al nuevo juego ingresado, compara el string ignorando las mayusculas.
@@ -138,7 +138,7 @@ namespace SimulacroParcial2
             Console.WriteLine("Videojuego agregado exitosamente");
         }
 
-        //2. Funcion para buscar un videojuego
+        //2. Funcion para buscar un videojuego(Busqueda con foreach)
         static void BuscarVideojuego()
         {
             Console.Write("Ingrese el nombre del videojuego a buscar: ");
@@ -161,7 +161,7 @@ namespace SimulacroParcial2
                 Console.WriteLine("Videojuego no encontrado");
         }
 
-        //3. Funcion para listar todos los videojuegos
+        //3. Funcion para listar todos los videojuegos(Mostrar por pantalla con foreach)
         static void ListarVideojuegos() 
         {
             Console.WriteLine("Lista de videojuegos");
@@ -172,7 +172,7 @@ namespace SimulacroParcial2
             }
         }
 
-        //4. Funcion para ordenar los videojuegos por precio por metodo burbujeo
+        //4. Funcion para ordenar los videojuegos por precio(Ordenar por burbujeo)
         static void OrdenarVideojuegosPorPrecio()
         {
             //Recorrer todo el arreglo
@@ -197,7 +197,7 @@ namespace SimulacroParcial2
             Console.WriteLine("Videojuegos ordenados por precio exitosamente");
         }
         
-        //5. Funcion para registrar ventas de videojuegos
+        //5. Funcion para registrar ventas de videojuegos(Agregar elementos a una matriz)
         static void RegistrarVentas()
         {
             //Mostrar las empresas disponibles
@@ -228,7 +228,7 @@ namespace SimulacroParcial2
             Console.WriteLine("Ventas registradas exitosamente.");
         }
 
-        //6. Funcion para calcular el promedio de precios de los videojuegos
+        //6. Funcion para calcular el promedio de precios de los videojuegos (Promedio recorriendo con foreach)
         static void CalcularPromedioPrecio() 
         {
             double sumaPrecios = 0;
@@ -256,7 +256,7 @@ namespace SimulacroParcial2
             }
         }
 
-        //7. Funcion para filtrar videojuegos por edad minima
+        //7. Funcion para filtrar videojuegos por edad minima(Recorrido con foreach con condicion)
         static void FiltrarPorEdadMinima() 
         {
             Console.WriteLine("Ingrese la edad minima");
